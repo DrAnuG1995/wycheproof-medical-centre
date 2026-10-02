@@ -92,3 +92,20 @@ yet. Search the file for `class="ph"` to find them all. As at handover:
 
 Written for Wycheproof Medical Centre. No third party code is included beyond
 the two Google Fonts stylesheets.
+
+## Brand (supplied by the practice, October 2026)
+
+Logo and palette came from the practice. The logo is embedded in the page as a
+base64 PNG, so there is no separate image file to lose. Tagline: **Small Mountain Big Care**.
+
+| Colour | Hex | CSS variables |
+| --- | --- | --- |
+| Alpine navy | `#113567` | `--green`, `--green-dark`, `--green-tint`, `--green-line` |
+| Eucalyptus green | `#6E9D81` | `--wheat`, `--wheat-dark`, `--wheat-tint`, `--wheat-pale` |
+| Sky blue | `#7FCEE6` | `--sky`, `--sky-tint` |
+| Soft cream | `#FCF7F1` | `--ground` |
+
+The variable names are historical, from an earlier palette. Every colour on the
+site resolves through the `:root` block at the top of the file, so changing the
+values there re-themes the whole site. Emergency red (`--red`) is deliberately
+outside the brand palette and should stay that way.
