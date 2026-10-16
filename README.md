@@ -35,16 +35,18 @@ real URL.** The markup inside each section can be lifted across as is.
 
 These are deliberately inert in the prototype:
 
-1. **Appointment request form.** Collects name, date of birth, phone, preferred
-   days and times. Submits nowhere. Requests are meant to reach
-   `reception@wycheproofmedicalcentre.com.au`, and the site promises a callback
-   within 30 minutes during opening hours, so whatever it posts to has to land
-   somewhere reception genuinely watches.
-2. **General enquiry form** on the contact page. Same, submits nowhere.
-3. **QR code** on the practice policies page is a placeholder box. It needs to
+1. **Appointment request and general enquiry forms.** Both post to an online
+   form service (for example Formspree) that emails each submission to
+   `reception@wycheproofmedicalcentre.com.au`. Set the service up with that
+   address, then paste the form address it gives you into `FORM_ENDPOINT` in
+   the script. While `FORM_ENDPOINT` is empty the forms send nothing and tell
+   people to ring instead. The confirmation screen only shows once the service
+   accepts the submission. The site promises a callback within 30 minutes
+   during opening hours, so reception must watch that inbox.
+2. **QR code** on the practice policies page is a placeholder box. It needs to
    point at the complaints and feedback form, which routes to the practice
    manager, principal GP and Practice Hub team.
-4. **Map** on the contact page is a placeholder box.
+3. **Map** on the contact page is a placeholder box.
 
 ## Things that are live logic, not static text
 
