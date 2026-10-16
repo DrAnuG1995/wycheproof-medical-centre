@@ -10,8 +10,10 @@ clickable. Everything below is what a developer taking this over needs to know.
 ## What it is
 
 - `index.html` is the whole site. Styles and script are inline.
-- Twelve pages: home, appointments, after hours, services, medicals, our team,
-  aged care, new patients, MyMedicare, practice policies, work with us, contact.
+- Thirteen pages: home, appointments, after hours, services, medicals, our team,
+  aged care, new patients, MyMedicare, practice policies, AI scribe, work with
+  us, contact. The AI scribe page is linked from practice policies, new
+  patients and the footer rather than the main menu.
 - Two webfonts from Google Fonts: Lexend for body text, Literata for headings.
   Nothing else is fetched from anywhere.
 - Responsive. Verified with no horizontal overflow at 360, 390, 768 and 1024px.
@@ -31,9 +33,7 @@ live clinic website, because:
 **Each `<section data-route="...">` should become its own page with its own
 real URL.** The markup inside each section can be lifted across as is.
 
-## Not wired up
-
-These are deliberately inert in the prototype:
+## Forms, feedback and what is still inert
 
 1. **Appointment request and general enquiry forms.** Both post to an online
    form service (for example Formspree) that emails each submission to
@@ -43,10 +43,12 @@ These are deliberately inert in the prototype:
    people to ring instead. The confirmation screen only shows once the service
    accepts the submission. The site promises a callback within 30 minutes
    during opening hours, so reception must watch that inbox.
-2. **QR code** on the practice policies page is a placeholder box. It needs to
-   point at the complaints and feedback form, which routes to the practice
-   manager, principal GP and Practice Hub team.
-3. **Map** on the contact page is a placeholder box.
+2. **Feedback QR code** on the practice policies page points at the Practice
+   Hub feedback form, which routes to the practice manager, principal GP and
+   Practice Hub team. The button beside it opens the same link.
+3. **AI scribe page** (`#/ai-scribe`) explains Heidi and includes a printable
+   consent form. The Print button prints the form on its own.
+4. **Map** on the contact page is still a placeholder box.
 
 ## Things that are live logic, not static text
 
@@ -87,7 +89,7 @@ yet. Search the file for `class="ph"` to find them all. As at handover:
 ## Facts to verify before this goes live
 
 - The urgent care number, 03 5478 0700, has not been independently confirmed.
-- The practice changes ownership on 12 October 2026. Confirm the phone number,
+- The practice changes ownership on 9 November 2026. Confirm the phone number,
   fax and practice name all transfer, because the entire site assumes they do.
 
 ## Licence and ownership

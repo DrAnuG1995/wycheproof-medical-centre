@@ -203,6 +203,25 @@ footer .deflist span:last-child{color:#BFD2E8}
   .telbtn b{font-size:21px}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* ---------- printable consent form ---------- */
+.consentform{background:var(--surface);border:2px solid var(--ink);padding:32px;margin-top:56px}
+.consentform h3{font-size:21px}
+.consentform ul,.consentform ol{font-size:18px}
+.consentform .small{font-size:16px;color:var(--muted);margin-top:20px}
+.sigrow{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 32px;margin-top:28px}
+.sigrow div{display:flex;flex-direction:column}
+.sigrow span{font-weight:700;font-size:17px}
+.sigrow i{display:block;border-bottom:1.5px solid var(--ink);height:44px}
+@media (max-width:620px){.consentform{padding:22px}.sigrow{grid-template-columns:1fr}}
+#printhost{display:none}
+@media print{
+  .print-form body > :not(#printhost){display:none!important}
+  .print-form #printhost{display:block}
+  #printhost .consentform{margin:0;border:0;padding:0;font-size:12pt}
+  #printhost .grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  #printhost .noprint{display:none}
+}
 </style>
 
 <a class="skip" href="#main">Skip to content</a>
@@ -759,6 +778,8 @@ footer .deflist span:last-child{color:#BFD2E8}
         </ul>
         <h2 style="margin-top:36px">Getting your records across</h2>
         <p>We will ask you to sign a form so we can request your health summary from your previous practice. They may charge a small fee for this, which is their right. It usually takes a couple of weeks, so do not wait for it before coming in.</p>
+        <h2 style="margin-top:36px">AI scribe</h2>
+        <p>Some of our doctors use an AI scribe called Heidi to help write notes. Your doctor will ask before using it, and you can say no. <a href="#/ai-scribe">How it works</a></p>
         <h2 style="margin-top:36px">Registering with MyMedicare</h2>
         <p>Once you have been in a couple of times, we will ask whether you would like to register with us in MyMedicare. It is free, it does not lock you into anything, and it lets us do a few things for you that we otherwise cannot. <a href="#/mymedicare">What it means</a></p>
       </div>
@@ -850,6 +871,102 @@ footer .deflist span:last-child{color:#BFD2E8}
       <div class="card"><h3>Interpreters</h3><p>We can arrange an interpreter at no cost through TIS National. Tell reception when you book so it is organised before you arrive.</p></div>
       <div class="card"><h3>Home visits</h3><p>For registered patients of this practice only, and by arrangement. Ring reception to ask.</p></div>
       <div class="card"><h3>Transferring your records</h3><p>Moving away? Ask your new practice to request your health summary, or ask us directly. There is no charge for this.</p></div>
+      <div class="card"><h3>AI scribe (Heidi)</h3><p>Some of our doctors use an AI scribe to help write notes, only with your permission. <a href="#/ai-scribe">How it works and your choice</a></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= AI SCRIBE ============================= -->
+<section class="page" data-route="ai-scribe" hidden>
+  <div class="wrap lede">
+    <p class="eyebrow">Your consent</p>
+    <h1>AI scribe (Heidi)</h1>
+    <p class="sub">Some of our doctors use Heidi, an AI scribe, to help write consultation notes. It is only used with your permission.</p>
+
+    <div class="split" style="margin-top:44px">
+      <div>
+        <h2>What it does</h2>
+        <p>With your permission, Heidi listens during the consultation and drafts a note. Your doctor checks and corrects every note before it goes into your record, and remains responsible for your care. Heidi does not make decisions about your care.</p>
+
+        <h2 style="margin-top:36px">Your choice</h2>
+        <ul>
+          <li><strong>Your doctor will ask you before using it.</strong></li>
+          <li>You can say no, change your mind at any time, or ask for it to be stopped partway through.</li>
+          <li>If you say no, your doctor writes the notes the usual way. Your care does not change.</li>
+          <li>Your choice is noted in your record.</li>
+        </ul>
+        <div class="note">
+          <b>Would rather it was not used?</b>
+          <p>Tell reception, the practice manager or your doctor before your appointment, and your doctor will not use it.</p>
+        </div>
+
+        <h2 style="margin-top:36px">What happens to your information</h2>
+        <p>This is how Heidi Health describes the way it handles information:</p>
+        <ul>
+          <li><strong>No recording is kept.</strong> The conversation is turned into text as it happens, and the audio is not stored.</li>
+          <li><strong>Only your doctor can see it in Heidi.</strong> The finished note is copied into our own clinical records, where your record is kept.</li>
+          <li><strong>Deleted automatically.</strong> The transcript and draft note are deleted from Heidi after 30 days.</li>
+          <li><strong>Stored locally.</strong> Heidi uses local data storage for clinics in Australia.</li>
+          <li><strong>Not sold or reused.</strong> Heidi does not sell patient data. Companies that process data for Heidi must delete it straight away and cannot use it for training.</li>
+        </ul>
+        <p>Our <a href="#/policies">practice policies</a> explain how we look after your health information.</p>
+      </div>
+      <div class="stack" style="gap:20px">
+        <div class="aside">
+          <h3>Consent form</h3>
+          <p>Read the form below at home, and print it if you like. You can also ask for a paper copy at reception.</p>
+          <a class="btn btn-primary" style="width:100%" href="#consentform" data-jump>Read the consent form</a>
+        </div>
+        <div class="card">
+          <h3>Questions?</h3>
+          <p>Ask your doctor at the start of your appointment, or ring the practice on <span class="num">03 5493 7672</span> and ask for Georgina Morrison, our practice manager.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="consentform" id="consentform">
+      <p class="eyebrow" style="margin-bottom:8px">Wycheproof Medical Centre &middot; 23 Grandview Street, Wycheproof VIC 3527 &middot; <span class="num">03 5493 7672</span></p>
+      <h2>Patient consent: AI scribe (Heidi)</h2>
+      <p>Some of our doctors use Heidi, an AI scribe, to help write consultation notes. It means they can spend more of your appointment looking at you and listening, rather than typing. We need your consent before using it, and you can say no or change your mind at any time.</p>
+      <div class="grid g3" style="margin:24px 0">
+        <div>
+          <h3>Purpose of Heidi</h3>
+          <ul>
+            <li>Heidi helps your doctor write notes from the consultation.</li>
+            <li>It supports, but does not replace, your doctor's professional judgement. All medical decisions are made by your doctor.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Your data</h3>
+          <ul>
+            <li>Heidi Health states that your data is processed and stored locally, under Australian privacy law, and is not used for any other purpose.</li>
+            <li>No audio recording is kept. The transcript and draft note are deleted from Heidi after 30 days.</li>
+            <li>Heidi Health states that data is encrypted and its handling is regularly audited.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Your rights</h3>
+          <ul>
+            <li>You can say no to Heidi being used.</li>
+            <li>You can withdraw your consent at any time, including partway through a consultation, without affecting your care.</li>
+          </ul>
+        </div>
+      </div>
+      <p><strong>By signing this form, you acknowledge that:</strong></p>
+      <ol>
+        <li>You have been told about the use of Heidi and its purpose.</li>
+        <li>You understand how your information will be handled, stored and protected.</li>
+        <li>You agree to your doctor using Heidi to help write notes from your consultations.</li>
+        <li>You understand that you can withdraw your consent at any time without affecting your care.</li>
+      </ol>
+      <div class="sigrow">
+        <div><span>Name</span><i></i></div>
+        <div><span>Date of birth</span><i></i></div>
+        <div><span>Signature</span><i></i></div>
+        <div><span>Date</span><i></i></div>
+      </div>
+      <p class="small">Based on Heidi Health's patient consent template. More information: heidihealth.com</p>
+      <button class="btn btn-ghost noprint" id="printconsent">Print this form</button>
     </div>
   </div>
 </section>
@@ -1031,6 +1148,7 @@ footer .deflist span:last-child{color:#BFD2E8}
         <a href="#/policies">Your health information and privacy</a>
         <a href="#/policies">Feedback and complaints</a>
         <a href="#/policies">Interpreter services</a>
+        <a href="#/ai-scribe">AI scribe and your consent</a>
       </div>
       <div>
         <h4>For doctors</h4>
@@ -1058,7 +1176,7 @@ footer .deflist span:last-child{color:#BFD2E8}
     "after-hours":"After hours", services:"Our services",
     medicals:"Medicals and certificates", team:"Our team",
     "aged-care":"Aged care", "new-patients":"New patients", mymedicare:"MyMedicare",
-    policies:"Practice policies", "work-with-us":"Work with us", contact:"Contact"
+    policies:"Practice policies", "ai-scribe":"AI scribe (Heidi)", "work-with-us":"Work with us", contact:"Contact"
   };
   function routeOf(){
     var h = (location.hash || "").replace(/^#\/?/, "");
@@ -1280,6 +1398,33 @@ footer .deflist span:last-child{color:#BFD2E8}
       onSent();
     }).catch(failed);
   }
+
+  /* ---------------- consent form ---------------- */
+  /* In-page jumps would otherwise change the hash and trigger the router. */
+  document.querySelectorAll("[data-jump]").forEach(function(a){
+    a.addEventListener("click", function(e){
+      e.preventDefault();
+      var el = document.getElementById(a.getAttribute("href").slice(1));
+      el.scrollIntoView({block:"start"});
+    });
+  });
+  /* Print a copy of the form on its own, so nothing else on the page prints. */
+  document.getElementById("printconsent").addEventListener("click", function(){
+    var host = document.createElement("div");
+    host.id = "printhost";
+    var copy = document.getElementById("consentform").cloneNode(true);
+    copy.removeAttribute("id");
+    copy.querySelector("#printconsent").removeAttribute("id");
+    host.appendChild(copy);
+    document.body.appendChild(host);
+    document.documentElement.classList.add("print-form");
+    window.print();
+  });
+  window.addEventListener("afterprint", function(){
+    document.documentElement.classList.remove("print-form");
+    var host = document.getElementById("printhost");
+    if (host) host.parentNode.removeChild(host);
+  });
 
   /* ---------------- go ---------------- */
   if (!location.hash) location.hash = "#/home";
