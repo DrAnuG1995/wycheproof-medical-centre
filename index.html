@@ -754,6 +754,8 @@ footer .deflist span:last-child{color:#BFD2E8}
         </ul>
         <h2 style="margin-top:36px">Getting your records across</h2>
         <p>We will ask you to sign a form so we can request your health summary from your previous practice. They may charge a small fee for this, which is their right. It usually takes a couple of weeks, so do not wait for it before coming in.</p>
+        <h2 style="margin-top:36px">AI scribe</h2>
+        <p>Some of our doctors use an AI scribe called Heidi to help write notes. Your doctor will ask before using it, and you can say no. <a href="#/ai-scribe">How it works</a></p>
         <h2 style="margin-top:36px">Registering with MyMedicare</h2>
         <p>Once you have been in a couple of times, we will ask whether you would like to register with us in MyMedicare. It is free, it does not lock you into anything, and it lets us do a few things for you that we otherwise cannot. <a href="#/mymedicare">What it means</a></p>
       </div>
@@ -847,6 +849,56 @@ footer .deflist span:last-child{color:#BFD2E8}
       <div class="card"><h3>Interpreters</h3><p>We can arrange an interpreter at no cost through TIS National. Tell reception when you book so it is organised before you arrive.</p></div>
       <div class="card"><h3>Home visits</h3><p>For registered patients of this practice only, and by arrangement. Ring reception to ask.</p></div>
       <div class="card"><h3>Transferring your records</h3><p>Moving away? Ask your new practice to request your health summary, or ask us directly. There is no charge for this.</p></div>
+      <div class="card"><h3>AI scribe (Heidi)</h3><p>Some of our doctors use an AI scribe to help write notes, only with your permission. <a href="#/ai-scribe">How it works and your choice</a></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= AI SCRIBE ============================= -->
+<section class="page" data-route="ai-scribe" hidden>
+  <div class="wrap lede">
+    <p class="eyebrow">Your consent</p>
+    <h1>AI scribe (Heidi)</h1>
+    <p class="sub">Some of our doctors use Heidi, an AI scribe, to help write consultation notes. It is only used with your permission.</p>
+
+    <div class="split" style="margin-top:44px">
+      <div>
+        <h2>What it does</h2>
+        <p>With your permission, Heidi listens during the consultation and drafts a note. Your doctor checks and corrects every note before it goes into your record, and remains responsible for your care. Heidi does not make decisions about your care.</p>
+
+        <h2 style="margin-top:36px">Your choice</h2>
+        <ul>
+          <li><strong>Your doctor will ask you before using it.</strong></li>
+          <li>You can say no, change your mind at any time, or ask for it to be stopped partway through.</li>
+          <li>If you say no, your doctor writes the notes the usual way. Your care does not change.</li>
+          <li>Your choice is noted in your record.</li>
+        </ul>
+        <div class="note">
+          <b>Would rather it was not used?</b>
+          <p>Tell reception, the practice manager or your doctor before your appointment, and your doctor will not use it.</p>
+        </div>
+
+        <h2 style="margin-top:36px">What happens to your information</h2>
+        <p>This is how Heidi Health describes the way it handles information:</p>
+        <ul>
+          <li><strong>No recording is kept.</strong> The conversation is turned into text as it happens, and the audio is not stored.</li>
+          <li><strong>Only your doctor can see it in Heidi.</strong> The finished note is copied into our own clinical records, where your record is kept.</li>
+          <li><strong>Deleted automatically.</strong> The transcript and draft note are deleted from Heidi after <span class="ph">[number]</span> days.</li>
+          <li><strong>Stored locally.</strong> Heidi uses local data storage for clinics in Australia.</li>
+          <li><strong>Not sold or reused.</strong> Heidi does not sell patient data. Companies that process data for Heidi must delete it straight away and cannot use it for training.</li>
+        </ul>
+        <p>Our <a href="#/policies">practice policies</a> explain how we look after your health information.</p>
+      </div>
+      <div class="stack" style="gap:20px">
+        <div class="aside">
+          <h3>Consent form</h3>
+          <p style="margin:0"><span class="ph">[Heidi consent form to be added]</span></p>
+        </div>
+        <div class="card">
+          <h3>Questions?</h3>
+          <p>Ask your doctor at the start of your appointment, or ring the practice on <span class="num">03 5493 7672</span> and ask for Georgina Morrison, our practice manager.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -1025,6 +1077,7 @@ footer .deflist span:last-child{color:#BFD2E8}
         <a href="#/policies">Your health information and privacy</a>
         <a href="#/policies">Feedback and complaints</a>
         <a href="#/policies">Interpreter services</a>
+        <a href="#/ai-scribe">AI scribe and your consent</a>
       </div>
       <div>
         <h4>For doctors</h4>
@@ -1052,7 +1105,7 @@ footer .deflist span:last-child{color:#BFD2E8}
     "after-hours":"After hours", services:"Our services",
     medicals:"Medicals and certificates", team:"Our team",
     "aged-care":"Aged care", "new-patients":"New patients", mymedicare:"MyMedicare",
-    policies:"Practice policies", "work-with-us":"Work with us", contact:"Contact"
+    policies:"Practice policies", "ai-scribe":"AI scribe (Heidi)", "work-with-us":"Work with us", contact:"Contact"
   };
   function routeOf(){
     var h = (location.hash || "").replace(/^#\/?/, "");
