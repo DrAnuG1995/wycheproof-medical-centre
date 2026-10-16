@@ -46,8 +46,11 @@ real URL.** The markup inside each section can be lifted across as is.
 2. **Feedback QR code** on the practice policies page points at the Practice
    Hub feedback form, which routes to the practice manager, principal GP and
    Practice Hub team. The button beside it opens the same link.
-3. **AI scribe page** (`#/ai-scribe`) explains Heidi and includes a printable
-   consent form. The Print button prints the form on its own.
+3. **AI scribes page** (`#/ai-scribe`) explains Heidi and VoiceBox Scribe
+   side by side and includes a printable consent form with a tick box for
+   each. The Print button prints the form on its own. Heidi keeps no audio and
+   deletes transcripts after 30 days; VoiceBox keeps a recording for up to six
+   weeks. Keep the page and the privacy policy in step if either changes.
 4. **Map** on the contact page is still a placeholder box.
 
 ## Things that are live logic, not static text

@@ -209,6 +209,9 @@ footer .deflist span:last-child{color:#BFD2E8}
 .consentform h3{font-size:21px}
 .consentform ul,.consentform ol{font-size:18px}
 .consentform .small{font-size:16px;color:var(--muted);margin-top:20px}
+.tickrow{display:flex;flex-wrap:wrap;gap:16px 40px;font-size:19px;font-weight:700}
+.tickrow span{display:inline-flex;align-items:center}
+.tickbox{display:inline-block;width:24px;height:24px;border:2px solid var(--ink);margin-right:12px;flex:none}
 .sigrow{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 32px;margin-top:28px}
 .sigrow div{display:flex;flex-direction:column}
 .sigrow span{font-weight:700;font-size:17px}
@@ -778,8 +781,8 @@ footer .deflist span:last-child{color:#BFD2E8}
         </ul>
         <h2 style="margin-top:36px">Getting your records across</h2>
         <p>We will ask you to sign a form so we can request your health summary from your previous practice. They may charge a small fee for this, which is their right. It usually takes a couple of weeks, so do not wait for it before coming in.</p>
-        <h2 style="margin-top:36px">AI scribe</h2>
-        <p>Some of our doctors use an AI scribe called Heidi to help write notes. Your doctor will ask before using it, and you can say no. <a href="#/ai-scribe">How it works</a></p>
+        <h2 style="margin-top:36px">AI scribes</h2>
+        <p>Some of our doctors use an AI scribe, Heidi or VoiceBox, to help write notes. Your doctor will ask before using one, and you can say no. <a href="#/ai-scribe">How it works</a></p>
         <h2 style="margin-top:36px">Registering with MyMedicare</h2>
         <p>Once you have been in a couple of times, we will ask whether you would like to register with us in MyMedicare. It is free, it does not lock you into anything, and it lets us do a few things for you that we otherwise cannot. <a href="#/mymedicare">What it means</a></p>
       </div>
@@ -871,7 +874,7 @@ footer .deflist span:last-child{color:#BFD2E8}
       <div class="card"><h3>Interpreters</h3><p>We can arrange an interpreter at no cost through TIS National. Tell reception when you book so it is organised before you arrive.</p></div>
       <div class="card"><h3>Home visits</h3><p>For registered patients of this practice only, and by arrangement. Ring reception to ask.</p></div>
       <div class="card"><h3>Transferring your records</h3><p>Moving away? Ask your new practice to request your health summary, or ask us directly. There is no charge for this.</p></div>
-      <div class="card"><h3>AI scribe (Heidi)</h3><p>Some of our doctors use an AI scribe to help write notes, only with your permission. <a href="#/ai-scribe">How it works and your choice</a></p></div>
+      <div class="card"><h3>AI scribes (Heidi and VoiceBox)</h3><p>Some of our doctors use an AI scribe to help write notes, only with your permission. <a href="#/ai-scribe">How it works and your choice</a></p></div>
     </div>
   </div>
 </section>
@@ -880,17 +883,17 @@ footer .deflist span:last-child{color:#BFD2E8}
 <section class="page" data-route="ai-scribe" hidden>
   <div class="wrap lede">
     <p class="eyebrow">Your consent</p>
-    <h1>AI scribe (Heidi)</h1>
-    <p class="sub">Some of our doctors use Heidi, an AI scribe, to help write consultation notes. It is only used with your permission.</p>
+    <h1>AI scribes and your consent</h1>
+    <p class="sub">Some of our doctors use an AI scribe, either Heidi or VoiceBox, to help write consultation notes. It is only used with your permission.</p>
 
     <div class="split" style="margin-top:44px">
       <div>
         <h2>What it does</h2>
-        <p>With your permission, Heidi listens during the consultation and drafts a note. Your doctor checks and corrects every note before it goes into your record, and remains responsible for your care. Heidi does not make decisions about your care.</p>
+        <p>With your permission, the AI scribe listens during the consultation and drafts a note. Your doctor checks and corrects every note before it goes into your record, and remains responsible for your care. The AI scribe does not make decisions about your care.</p>
 
         <h2 style="margin-top:36px">Your choice</h2>
         <ul>
-          <li><strong>Your doctor will ask you before using it.</strong></li>
+          <li><strong>Your doctor will ask you before using it, and tell you which scribe they use.</strong></li>
           <li>You can say no, change your mind at any time, or ask for it to be stopped partway through.</li>
           <li>If you say no, your doctor writes the notes the usual way. Your care does not change.</li>
           <li>Your choice is noted in your record.</li>
@@ -901,13 +904,21 @@ footer .deflist span:last-child{color:#BFD2E8}
         </div>
 
         <h2 style="margin-top:36px">What happens to your information</h2>
-        <p>This is how Heidi Health describes the way it handles information:</p>
+        <p>The two scribes work differently. This is how each company describes the way it handles information. With either one, the finished note is copied into our own clinical records, where your record is kept.</p>
+        <h3 style="margin-top:24px">Heidi</h3>
         <ul>
           <li><strong>No recording is kept.</strong> The conversation is turned into text as it happens, and the audio is not stored.</li>
-          <li><strong>Only your doctor can see it in Heidi.</strong> The finished note is copied into our own clinical records, where your record is kept.</li>
+          <li><strong>Only your doctor can see it in Heidi.</strong></li>
           <li><strong>Deleted automatically.</strong> The transcript and draft note are deleted from Heidi after 30 days.</li>
           <li><strong>Stored locally.</strong> Heidi uses local data storage for clinics in Australia.</li>
           <li><strong>Not sold or reused.</strong> Heidi does not sell patient data. Companies that process data for Heidi must delete it straight away and cannot use it for training.</li>
+        </ul>
+        <h3 style="margin-top:24px">VoiceBox Scribe</h3>
+        <ul>
+          <li><strong>A recording is kept for a short time.</strong> VoiceBox records the consultation to write a summary for your record. The recording is typically kept for up to six weeks and then deleted.</li>
+          <li><strong>Stored in Australia.</strong> VoiceBox data is held in Microsoft Azure data centres in Australia.</li>
+          <li><strong>Not used to train AI.</strong></li>
+          <li>VoiceBox is run by Avant Practice Solutions, a Melbourne company.</li>
         </ul>
         <p>Our <a href="#/policies">practice policies</a> explain how we look after your health information.</p>
       </div>
@@ -926,37 +937,38 @@ footer .deflist span:last-child{color:#BFD2E8}
 
     <div class="consentform" id="consentform">
       <p class="eyebrow" style="margin-bottom:8px">Wycheproof Medical Centre &middot; 23 Grandview Street, Wycheproof VIC 3527 &middot; <span class="num">03 5493 7672</span></p>
-      <h2>Patient consent: AI scribe (Heidi)</h2>
-      <p>Some of our doctors use Heidi, an AI scribe, to help write consultation notes. It means they can spend more of your appointment looking at you and listening, rather than typing. We need your consent before using it, and you can say no or change your mind at any time.</p>
+      <h2>Patient consent: AI scribes (Heidi and VoiceBox)</h2>
+      <p>Some of our doctors use an AI scribe, either Heidi or VoiceBox, to help write consultation notes. It means they can spend more of your appointment looking at you and listening, rather than typing. We need your consent before using one, and you can say no or change your mind at any time.</p>
       <div class="grid g3" style="margin:24px 0">
         <div>
-          <h3>Purpose of Heidi</h3>
+          <h3>Purpose</h3>
           <ul>
-            <li>Heidi helps your doctor write notes from the consultation.</li>
+            <li>The AI scribe helps your doctor write notes from the consultation.</li>
             <li>It supports, but does not replace, your doctor's professional judgement. All medical decisions are made by your doctor.</li>
           </ul>
         </div>
         <div>
           <h3>Your data</h3>
           <ul>
-            <li>Heidi Health states that your data is processed and stored locally, under Australian privacy law, and is not used for any other purpose.</li>
-            <li>No audio recording is kept. The transcript and draft note are deleted from Heidi after 30 days.</li>
-            <li>Heidi Health states that data is encrypted and its handling is regularly audited.</li>
+            <li><strong>Heidi:</strong> no audio recording is kept. The transcript and draft note are deleted after 30 days. Heidi Health states that data is stored locally under Australian privacy law, encrypted, and not used for any other purpose.</li>
+            <li><strong>VoiceBox Scribe:</strong> the consultation is recorded, and the recording is typically kept for up to six weeks, then deleted. Data is held in Microsoft Azure data centres in Australia and is not used to train AI.</li>
           </ul>
         </div>
         <div>
           <h3>Your rights</h3>
           <ul>
-            <li>You can say no to Heidi being used.</li>
+            <li>You can say no to either scribe, or to both.</li>
             <li>You can withdraw your consent at any time, including partway through a consultation, without affecting your care.</li>
           </ul>
         </div>
       </div>
+      <p><strong>I agree to my doctor using (tick one or both):</strong></p>
+      <p class="tickrow"><span><i class="tickbox"></i>Heidi</span><span><i class="tickbox"></i>VoiceBox Scribe</span></p>
       <p><strong>By signing this form, you acknowledge that:</strong></p>
       <ol>
-        <li>You have been told about the use of Heidi and its purpose.</li>
-        <li>You understand how your information will be handled, stored and protected.</li>
-        <li>You agree to your doctor using Heidi to help write notes from your consultations.</li>
+        <li>You have been told about the use of the AI scribes and their purpose.</li>
+        <li>You understand how your information will be handled, stored and protected, including that VoiceBox keeps a recording for up to six weeks.</li>
+        <li>You agree to your doctor using the AI scribe or scribes you have ticked to help write notes from your consultations.</li>
         <li>You understand that you can withdraw your consent at any time without affecting your care.</li>
       </ol>
       <div class="sigrow">
@@ -965,7 +977,7 @@ footer .deflist span:last-child{color:#BFD2E8}
         <div><span>Signature</span><i></i></div>
         <div><span>Date</span><i></i></div>
       </div>
-      <p class="small">Based on Heidi Health's patient consent template. More information: heidihealth.com</p>
+      <p class="small">Based on Heidi Health's patient consent template. More information: heidihealth.com and voiceboxit.com.au</p>
       <button class="btn btn-ghost noprint" id="printconsent">Print this form</button>
     </div>
   </div>
@@ -1148,7 +1160,7 @@ footer .deflist span:last-child{color:#BFD2E8}
         <a href="#/policies">Your health information and privacy</a>
         <a href="#/policies">Feedback and complaints</a>
         <a href="#/policies">Interpreter services</a>
-        <a href="#/ai-scribe">AI scribe and your consent</a>
+        <a href="#/ai-scribe">AI scribes and your consent</a>
       </div>
       <div>
         <h4>For doctors</h4>
@@ -1176,7 +1188,7 @@ footer .deflist span:last-child{color:#BFD2E8}
     "after-hours":"After hours", services:"Our services",
     medicals:"Medicals and certificates", team:"Our team",
     "aged-care":"Aged care", "new-patients":"New patients", mymedicare:"MyMedicare",
-    policies:"Practice policies", "ai-scribe":"AI scribe (Heidi)", "work-with-us":"Work with us", contact:"Contact"
+    policies:"Practice policies", "ai-scribe":"AI scribes and your consent", "work-with-us":"Work with us", contact:"Contact"
   };
   function routeOf(){
     var h = (location.hash || "").replace(/^#\/?/, "");
