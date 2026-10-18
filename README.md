@@ -82,7 +82,6 @@ real URL.** The markup inside each section can be lifted across as is.
 Anything in square brackets in the source is a real fact nobody has supplied
 yet. Search the file for `class="ph"` to find them all. As at handover:
 
-- Grace's surname on the team page
 - Medical fees other than paperwork, which is $100 out of pocket
 - Registrar accreditation status, supervision detail, housing and internet on
   the work with us page, and Dr Folorunsho's direct email
